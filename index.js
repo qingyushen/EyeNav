@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const Vision = require('@google-cloud/vision');
+//const Vision = require('@google-cloud/vision');
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 
