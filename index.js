@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
-//const Vision = require('@google-cloud/vision');
-var requests  = require('requests')
-//var upload = multer({ dest: 'uploads/' })
+const Vision = require('@google-cloud/vision');
+var upload = multer({ dest: 'uploads/' })
 
 
 app.get('/', function (req, res) {
@@ -13,7 +12,7 @@ app.listen(process.env.PORT, function () {
   console.log('Example app listening on port 3000!')
 })
 
-/*
+
 const fs = require ('fs')
 
 app.post('/image', upload.single('file'), function (req, res, next) {
@@ -33,15 +32,12 @@ app.post('/image', upload.single('file'), function (req, res, next) {
   .catch((err) => {
     console.error('ERROR:', err);
   });
-  //console.log(Object.keys(req.body))
   res.send(landmarks)
 })
 
 
 app.listen(process.env.PORT, function () {
   console.log('Server up and running')
-})*/
+})
 
 
-
-//app.post('/upload', upload.single('photo'),())
